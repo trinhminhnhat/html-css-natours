@@ -1,0 +1,38 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($black, 0.6);
+    background-color: $white;
+    border-radius: 3px;
+    padding: 6rem 6rem 6rem 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+
+    &__shape {
+        $shape-layout: circle(50% at 50% 50%);
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        background-color: aliceblue;
+        margin: 0 5px 5px 0;
+
+        // shape-outside using with float, same value with clip-path, circle ( r at cx cy)
+        -webkit-shape-outside: $shape-layout;
+        shape-outside: $shape-layout;
+
+        -webkit-clip-path: $shape-layout;
+        clip-path: $shape-layout;
+
+        // Can't use the same with section-features
+        // There's currently no way of having two transform properties applying at the same time
+        transform: translateX(-3rem) skewX(12deg);
+    }
+
+    &__img {
+        height: 100%;
+    }
+
+    &__text {
+        transform: skewX(12deg);
+    }
+}
