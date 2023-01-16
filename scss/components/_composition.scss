@@ -7,7 +7,6 @@
         border-radius: 2px;
         position: absolute;
         transition: all 0.2s;
-        outline-offset: 2rem;
 
         &--p1 {
             top: -2rem;
@@ -25,6 +24,7 @@
         }
 
         &:hover {
+            outline-offset: 2rem;
             outline: 1.5rem solid $medium-green;
             transform: scale(1.05) translateY(-0.5rem);
             box-shadow: 0 2.5rem 4rem rgba($black, 0.5);
