@@ -9,6 +9,21 @@
 html {
     /* 62.5% of 16px (browser font-size default) is 10px */
     font-size: 62.5%;
+
+    // width <= 1200px
+    @include response(tab-land) {
+        font-size: 56.25%; // 1 rem = 9px, 9/16 = 50%
+    }
+
+    // width <= 900px. priority
+    @include response(tab-port) {
+        font-size: 50%; // 1 rem = 8px, 8/16 = 50%
+    }
+
+    // width >= 1800px. more priority
+    @include response(big-desktop) {
+        font-size: 75%; // 1 rem = 12px, 12/16 = 75%
+    }
 }
 
 body {
