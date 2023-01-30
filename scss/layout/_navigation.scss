@@ -79,6 +79,8 @@
     &__link {
         &:link,
         &:visited {
+            opacity: 0;
+            visibility: hidden;
             display: inline-block;
             color: $white;
             padding: 1rem 2rem;
@@ -116,6 +118,11 @@
     &__checkbox:checked ~ &__nav {
         width: 100%;
         opacity: 1;
+    }
+
+    &__checkbox:checked ~ &__nav &__link {
+        opacity: 1;
+        visibility: inherit;
     }
 
     // hamburger icon
