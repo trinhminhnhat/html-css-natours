@@ -8,6 +8,15 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
+    @include response(tab-port) {
+        width: 100%;
+        padding: 4rem 4rem 4rem 7rem;
+    }
+
+    @include response(phone) {
+        transform: skewX(0);
+    }
+
     &__shape {
         $shape-layout: circle(50% at 50% 50%);
         width: 15rem;
@@ -27,6 +36,10 @@
         // Can't use the same with section-features
         // There's currently no way of having two transform properties applying at the same time
         transform: translateX(-3rem) skewX(12deg);
+
+        @include response(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__img {
@@ -38,6 +51,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include response(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {
