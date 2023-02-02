@@ -77,9 +77,22 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <!-- * Responsive Images in HTML: Density + Resolution Switching -->
+                        <!-- 300w 1000w (origin image width) is width descriptors
+                            When you use width descriptors, the browser picks the best source -->
+                        <img src="img/nat-1-large.jpg" srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 15vw, (max-width: 37.5em) 22vw, 300px" alt="Photo 1"
+                            class="composition__photo composition__photo--p1">
+                        <img src="img/nat-2-large.jpg" srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 15vw, (max-width: 37.5em) 22vw, 300px" alt="Photo 2"
+                            class="composition__photo composition__photo--p2">
+                        <img src="img/nat-3-large.jpg" srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width: 56.25em) 15vw, (max-width: 37.5em) 22vw, 300px" alt="Photo 3"
+                            class="composition__photo composition__photo--p3">
+
+                        <!-- <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                         <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
                     </div>
                 </div>
             </div>
@@ -365,18 +378,21 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <!-- * Responsive Images: Art Direction -->
+            <!-- * Responsive Images in HTML: Art Direction + Density Switching -->
             <picture class="footer__logo">
                 <!-- use src attr in case browser does not support scrset -->
+                <source src="img/logo-green-2x.png" srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+                    media="(max-width: 37.5em)">
                 <source src="img/logo-green-small-2x.png"
-                    srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                    srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                    media="(max-width: 56.25em)">
                 <img src="img/logo-green-2x.png" srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Logo">
             </picture>
 
             <!-- * Normal method -->
             <!-- <img src="img/logo-green-2x.png" alt="Logo" class="footer__logo"> -->
 
-            <!-- * Responsive Images: Density Switching (1x, 2x is density descriptors) -->
+            <!-- * Responsive Images in HTML: Density Switching (1x, 2x is density descriptors) -->
             <!-- use src attr in case browser does not support scrset -->
             <!-- <img src="img/logo-green-2x.png" srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Logo"
                 class="footer__logo"> -->
