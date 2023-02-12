@@ -2,6 +2,10 @@
 
 A responsive web design using float layout.
 
+![Web's preview](./img/banner.png)
+
+Live: [**https://trinhminhnhat.github.io/html-css-natours**](https://trinhminhnhat.github.io/html-css-natours)
+
 ## ⚓ Environment
 
 - Node 19.3.0
